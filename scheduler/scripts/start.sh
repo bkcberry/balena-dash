@@ -2,7 +2,7 @@
 if [ "1" -eq "1" ]
 then
   (crontab -l; echo "${BACKLIGHT_ON:-0 8 * * *} /usr/src/backlight_on.sh") | crontab -
-  (crontab -l; echo "${BACKLIGHT_OFF:-0 20 * * *} /usr/src/backlight_off.sh") | crontab -
+  (crontab -l; echo "${BACKLIGHT_OFF:-45 14 * * *} /usr/src/backlight_off.sh") | crontab -
 fi
 
 crond -f
