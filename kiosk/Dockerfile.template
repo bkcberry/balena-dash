@@ -2,3 +2,7 @@ FROM bh.cr/balenablocks/browser-%%BALENA_ARCH%%/2.3.8
 
 RUN install_packages cec-utils cron
 
+COPY scripts/amd64 /usr/src/
+RUN chmod +x /usr/src/*.sh
+
+CMD ["/usr/src/start.sh"]
